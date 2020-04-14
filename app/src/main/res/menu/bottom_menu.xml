@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/calcFragment"
+        android:title="Calculation"
+        android:icon="@drawable/ic_create"
+        />
+
+    <item
+        android:id="@+id/resultFragment"
+        android:title="Results"
+        android:icon="@drawable/ic_result"
+        />
+
+    <item
+        android:id="@+id/perfomanceFragment"
+        android:title="Perfomance"
+        android:icon="@drawable/ic_perfomance"
+        />
+
+</menu>

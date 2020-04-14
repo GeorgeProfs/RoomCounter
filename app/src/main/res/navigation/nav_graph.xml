@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/calcFragment">
+
+    <fragment
+        android:id="@+id/calcFragment"
+        android:name="profs.roomcounter.ui.CalcFragment"
+        android:label="fragment_calc"
+        tools:layout="@layout/fragment_calc" />
+    <fragment
+        android:id="@+id/perfomanceFragment"
+        android:name="profs.roomcounter.ui.PerfomanceFragment"
+        android:label="fragment_perfomance"
+        tools:layout="@layout/fragment_perfomance">
+        <action
+            android:id="@+id/actionUpdatePerfomance"
+            app:destination="@id/updatePerfomanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="profs.roomcounter.ui.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/updatePerfomanceFragment"
+        android:name="profs.roomcounter.ui.UpdatePerfomanceFragment"
+        android:label="fragment_update_perfomance"
+        tools:layout="@layout/fragment_update_perfomance" >
+        <action
+            android:id="@+id/action_updatePerfomanceFragment_to_perfomanceFragment"
+            app:destination="@id/perfomanceFragment" />
+        <argument
+            app:argType="profs.roomcounter.data.Perfomance"
+            android:name="Perfomance"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CalcFragment">
+
+    <Button
+        android:id="@+id/datePickerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/datePicker" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePickerButton"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/oldDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oldDate" />
+
+            <EditText
+                android:id="@+id/editOldDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldDate"
+                android:ems="6"
+                android:hint="@string/oldDate"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/oldHotWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOldDate"
+                android:layout_marginTop="10dp"
+                android:text="@string/hotWater" />
+
+            <EditText
+                android:id="@+id/editOldHotWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldHotWater"
+                android:ems="7"
+                android:hint="@string/hotWater"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/oldColdWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOldHotWater"
+                android:layout_marginTop="10dp"
+                android:text="@string/coldWater" />
+
+            <EditText
+                android:id="@+id/editOldColdWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldColdWater"
+                android:ems="7"
+                android:hint="@string/coldWater"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/oldT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOldColdWater"
+                android:layout_marginTop="5dp"
+                android:text="@string/t1" />
+
+            <EditText
+                android:id="@+id/editOldT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldT1"
+                android:ems="7"
+                android:hint="@string/t1"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/oldT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOldT1"
+                android:layout_marginTop="5dp"
+                android:text="@string/t2" />
+
+            <EditText
+                android:id="@+id/editOldT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldT2"
+                android:ems="7"
+                android:hint="@string/t2"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/oldT3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editOldT2"
+                android:layout_marginTop="5dp"
+                android:text="@string/t3" />
+
+            <EditText
+                android:id="@+id/editOldT3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oldT3"
+                android:ems="7"
+                android:hint="@string/t3"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datePickerButton"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/newDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/newDate" />
+
+            <EditText
+                android:id="@+id/editNewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newDate"
+                android:ems="7"
+                android:hint="@string/newDate"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/newHotWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editNewDate"
+                android:layout_marginTop="10dp"
+                android:text="@string/hotWater" />
+
+
+            <EditText
+                android:id="@+id/editNewHotWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newHotWater"
+                android:ems="7"
+                android:hint="@string/hotWater"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/newColdWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editNewHotWater"
+                android:layout_marginTop="10dp"
+                android:text="@string/coldWater" />
+
+            <EditText
+                android:id="@+id/editNewColdWater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newColdWater"
+                android:ems="7"
+                android:hint="@string/coldWater"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/newT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editNewColdWater"
+                android:layout_marginTop="5dp"
+                android:text="@string/t1" />
+
+            <EditText
+                android:id="@+id/editNewT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newT1"
+                android:ems="7"
+                android:hint="@string/t1"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/newT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editNewT1"
+                android:layout_marginTop="5dp"
+                android:text="@string/t2" />
+
+            <EditText
+                android:id="@+id/editNewT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newT2"
+                android:ems="7"
+                android:hint="@string/t2"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/newT3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editNewT2"
+                android:layout_marginTop="5dp"
+                android:text="@string/t3" />
+
+            <EditText
+                android:id="@+id/editNewT3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newT3"
+                android:ems="7"
+                android:hint="@string/t3"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/button_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Dialog" />
+
+    <Button
+        android:id="@+id/button_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Save" />
+
+</RelativeLayout>

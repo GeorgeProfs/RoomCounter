@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RoomCounter</string>
+    <string name="datePicker">Выбрать дату</string>
+    <string name="oldDate">Старая дата</string>
+    <string name="newDate">Новая дата</string>
+    <string name="hotWater">Горячая вода</string>
+    <string name="coldWater">Холодная вода</string>
+    <string name="t1">T1</string>
+    <string name="t2">T2</string>
+    <string name="t3">T3</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
