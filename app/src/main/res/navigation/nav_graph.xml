@@ -3,13 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/calcFragment">
-
+    app:startDestination="@id/oldPerfomanceFragment">
     <fragment
-        android:id="@+id/calcFragment"
-        android:name="profs.roomcounter.ui.CalcFragment"
-        android:label="fragment_calc"
-        tools:layout="@layout/fragment_calc" />
+        android:id="@+id/oldPerfomanceFragment"
+        android:name="profs.roomcounter.ui.OldPerfomanceFragment"
+        android:label="fragment_oldPerfomance"
+        tools:layout="@layout/fragment_old_perfomance" >
+        <action
+            android:id="@+id/action_goToNewPerfomance"
+            app:destination="@id/newPerfomanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPerfomanceFragment"
+        android:name="profs.roomcounter.ui.NewPerfomanceFragment"
+        android:label="fragment_newPerfomance"
+        tools:layout="@layout/fragment_new_perfomance" />
     <fragment
         android:id="@+id/perfomanceFragment"
         android:name="profs.roomcounter.ui.PerfomanceFragment"

@@ -15,7 +15,7 @@ class CalcAcceptDialogFragment (result: String, oldPerfomance: Perfomance, newPe
     val result = result
     val oldPerfomance = oldPerfomance
     val newPerfomance = newPerfomance
-    val newResult: Result = Result(oldPerfomance.id, newPerfomance.id, result)
+    val newResult: Result = Result(id, oldPerfomance.id, newPerfomance.id, result)
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
@@ -24,9 +24,9 @@ class CalcAcceptDialogFragment (result: String, oldPerfomance: Perfomance, newPe
             builder.setTitle("Важное сообщение!")
                 .setMessage(result)
                 .setIcon(R.drawable.ic_format_list)
-                .setPositiveButton("Записать результат") {
-                        dialog, id -> CalcFragment().setOnClick(oldPerfomance, newPerfomance, newResult)
-                }
+             //   .setPositiveButton("Записать результат") {
+    //                    dialog, id -> CalcFragment().setOnClick(oldPerfomance, newPerfomance, newResult)
+      //          }
                 .setNegativeButton("Сбросить"){
                         dialog, id ->  dialog.cancel()
                 }

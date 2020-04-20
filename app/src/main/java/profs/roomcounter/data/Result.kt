@@ -24,10 +24,9 @@ import java.io.Serializable
 
 )
 data class Result(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
     val oldPerfomanceId: Int,
     val newPerfomanceId: Int,
     val monthResult: String
-) : Serializable {
-    @PrimaryKey(autoGenerate = true)
-    var id: Int = 0
-}
+) : Serializable

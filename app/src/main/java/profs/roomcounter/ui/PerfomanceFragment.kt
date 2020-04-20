@@ -6,13 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import kotlinx.android.synthetic.main.fragment_perfomance.*
 import kotlinx.coroutines.launch
-
 import profs.roomcounter.R
-import profs.roomcounter.data.PerfomanceDatabase
+import profs.roomcounter.data.RoomCounterDatabase
 
 /**
  * A simple [Fragment] subclass.
@@ -35,7 +33,7 @@ class PerfomanceFragment : BaseFragment() {
 
         launch {
             context?.let {
-                val perfomances = PerfomanceDatabase(it).getPerfomanceDao().getAllPerfomances()
+                val perfomances = RoomCounterDatabase(it).getPerfomanceDao().getAllPerfomances()
                 recycler_view_perfomances.adapter = PerfomanceAdapter(perfomances)
             }
         }

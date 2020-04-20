@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/calcFragment"
+        android:id="@+id/oldPerfomanceFragment"
         android:title="Calculation"
         android:icon="@drawable/ic_create"
         />

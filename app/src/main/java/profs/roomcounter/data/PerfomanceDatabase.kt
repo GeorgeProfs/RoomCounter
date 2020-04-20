@@ -7,19 +7,20 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
 @Database(
-    entities = [Perfomance::class],
+    entities = [Perfomance::class, Result::class],
     version = 1,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
-abstract class PerfomanceDatabase: RoomDatabase() {
+abstract class RoomCounterDatabase: RoomDatabase() {
 
+    abstract fun getResultDao(): ResultDao
     abstract fun getPerfomanceDao(): PerfomanceDao
 
     companion object {
 
         @Volatile
-        private var instance: PerfomanceDatabase? = null
+        private var instance: RoomCounterDatabase? = null
         private val LOCK = Any()
 
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
@@ -29,8 +30,8 @@ abstract class PerfomanceDatabase: RoomDatabase() {
 
         private fun buildDatabase(context: Context) = Room.databaseBuilder(
             context.applicationContext,
-            PerfomanceDatabase::class.java,
-            "PerfomanceDatabase"
+            RoomCounterDatabase::class.java,
+            "RoomCounterDatabase"
         ).build()
     }
 }
